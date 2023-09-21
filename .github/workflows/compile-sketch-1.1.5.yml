@@ -26,8 +26,8 @@ jobs:
           sketch-paths: |
             - ./examples/
           libraries: |
-            - source-url: https://github.com/adafruit/SdFat.git
             - source-url: https://github.com/adafruit/Adafruit_NeoPixel.git
             - source-url: https://github.com/adafruit/Adafruit_Seesaw.git
             - source-url: https://github.com/adafruit/Adafruit_CircuitPlayground.git
             - source-url: https://github.com/FortySevenEffects/arduino_midi_library.git
+            - source-url: https://github.com/adafruit/Adafruit_BusIO.git
