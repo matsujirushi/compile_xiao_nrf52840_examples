@@ -1,0 +1,28 @@
+name: Compile Sketch
+on:
+  - workflow_dispatch
+
+jobs:
+  compile-sketch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install adafruit-nrfutil
+        run: |
+          pip3 install adafruit-nrfutil
+
+      - name: Compile sketch
+        uses: arduino/compile-sketches@v1
+        with:
+          platforms: |
+            - name: Seeeduino:nrf52
+              version: 1.1.1
+              source-url: https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+          fqbn: Seeeduino:nrf52:xiaonRF52840
+          sketch-paths: |
+            - ./examples/
+          libraries: |
+            -
