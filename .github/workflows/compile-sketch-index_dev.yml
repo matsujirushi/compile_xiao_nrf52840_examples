@@ -20,6 +20,7 @@ jobs:
         with:
           platforms: |
             - name: Seeeduino:nrf52
+              version: 1.1.1
               source-url: https://www.seeed.co.jp/package_seeeduino_boards_index_dev.json
           fqbn: Seeeduino:nrf52:xiaonRF52840
           sketch-paths: |
